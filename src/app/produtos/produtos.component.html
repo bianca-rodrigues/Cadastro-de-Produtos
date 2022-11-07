@@ -1,0 +1,19 @@
+<h2>Produtos</h2>
+
+<ul>
+    <li>
+        <span>{{prod.id}}</span>{{prod.nome}}
+    </li>
+</ul>
+
+
+<h2>{{prod.nome | uppercase}} Details</h2>
+<div><span>id: </span>{{prod.id}}</div>
+<div><span>nome: </span>{{prod.nome}}</div>
+<div><span>preço: </span>{{prod.preco}}</div>
+<div><span>quantidade: </span>{{prod.quant}}</div>
+
+<div>
+    <label for="nome"> Produtos nome:</label>
+    <input id="nome" [(ngModel)]="prod.nome">
+</div>
