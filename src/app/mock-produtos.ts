@@ -10,5 +10,5 @@ export const Produtos: Produto[] = [
     {id: 7, nome: 'Farinha de Trigo', preco: 5.90, quant: 50},
     {id: 8, nome: 'Sal', preco: 3.20, quant: 50},
     {id: 9, nome: 'Azeite', preco: 19.00, quant: 50},
-    {id: 10, nome: 'Achocolatado', preco: 8.90, quant: 50},
-]
+    {id: 10, nome: 'Achocolatado', preco: 8.90, quant: 50}
+];

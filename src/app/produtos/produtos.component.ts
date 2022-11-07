@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Produtos } from '../mock-produtos';
+import { ProdutoService } from '../produto.service';
 import { Produto } from '../produtos.model';
 
 @Component({
@@ -8,23 +9,20 @@ import { Produto } from '../produtos.model';
   styleUrls: ['./produtos.component.css']
 })
 export class ProdutosComponent implements OnInit {
-  prod: Produto = {
-    id: 1,
-    nome: 'arroz',
-    preco: 15.90,
-    quant: 50
-  };
-
-  produtos = Produtos;
+  produtos = Produto[]= [];
   selectedProd?: Produto;
 
   onSelect(prod: Produto): void {
     this.selectedProd = prod;
   }
 
-  constructor() { }
+  constructor(private produtoService: ProdutoService ) { }
 
   ngOnInit(): void {
+    this.getProd();
   }
 
+  getProd(): void {
+    this.produtos = this.produtoService.getProd();
+  }
 }
