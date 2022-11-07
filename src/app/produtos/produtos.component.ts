@@ -16,6 +16,11 @@ export class ProdutosComponent implements OnInit {
   };
 
   produtos = Produtos;
+  selectedProd?: Produto;
+
+  onSelect(prod: Produto): void {
+    this.selectedProd = prod;
+  }
 
   constructor() { }
 
