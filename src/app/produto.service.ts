@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 import { Produtos } from './mock-produtos';
 import { Produto } from './produtos.model';
 
@@ -7,7 +8,8 @@ import { Produto } from './produtos.model';
 })
 export class ProdutoService {
 
-  getProd(): Produto[] {
-    return Produtos;
+  getProd(): Observable<Produto[]> {
+    const produtos = of(Produtos);
+    return produtos;
   }
 }

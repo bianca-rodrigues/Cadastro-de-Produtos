@@ -9,7 +9,7 @@ import { Produto } from '../produtos.model';
   styleUrls: ['./produtos.component.css']
 })
 export class ProdutosComponent implements OnInit {
-  produtos = Produto[]= [];
+  produtos: Produto[]= [];
   selectedProd?: Produto;
 
   onSelect(prod: Produto): void {
@@ -23,6 +23,6 @@ export class ProdutosComponent implements OnInit {
   }
 
   getProd(): void {
-    this.produtos = this.produtoService.getProd();
+   this.produtoService.getProd().subscribe( produtos => this.produtos = produtos);
   }
 }

@@ -1,9 +1,18 @@
 <h2>Produtos</h2>
 
-<ul>
-    <li *ngFor="let prod of produtos"(click)="onSelect(prod)">
-        <span>{{prod.id}} </span>{{prod.nome}} <span>{{prod.preco}} </span>{{prod.quant}}
-    </li>
-</ul>
+<table>
+  <tr>
+    <th class="header">Id</th>
+    <th class="header">Nome</th>
+    <th class="header">Preço</th>
+    <th class="header">Quantidade</th>
+  </tr>
+  <tr class="linha" *ngFor="let prod of produtos"(click)="onSelect(prod)">
+    <th>{{prod.id}}</th>
+    <th>{{prod.nome}}</th>
+    <th>R$ {{prod.preco}}</th>
+    <th>{{prod.quant}}</th>
+  </tr>
+</table>
 
 <app-detalhes-produtos [prod]="selectedProd"></app-detalhes-produtos>
