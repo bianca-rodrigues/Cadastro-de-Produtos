@@ -4,14 +4,18 @@
   <tr>
     <th class="header">Id</th>
     <th class="header">Nome</th>
+    <th class="header">Marca</th>
     <th class="header">Preço</th>
     <th class="header">Quantidade</th>
+    <th class="header">Tipo</th>
   </tr>
   <tr class="linha" *ngFor="let prod of produtos"(click)="onSelect(prod)">
     <th>{{prod.id}}</th>
     <th>{{prod.nome}}</th>
+    <th>{{prod.marca}}</th>
     <th>R$ {{prod.preco}}</th>
     <th>{{prod.quant}}</th>
+    <th>{{prod.tipo}}</th>
   </tr>
 </table>
 

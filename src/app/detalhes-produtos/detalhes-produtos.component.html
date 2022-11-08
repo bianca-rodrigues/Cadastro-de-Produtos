@@ -3,8 +3,10 @@
     <h3>Detalhes do produto:</h3>
     <div class="info"><span>Id: </span>{{prod.id}}</div>
     <div class="info"><span>Nome: </span>{{prod.nome}}</div>
-    <div class="info"><span>Preço: R$ </span>{{prod.preco}}</div>
+    <div class="info"><span>Marca: </span>{{prod.marca}}</div>
+    <div class="info"><span>Preço: </span>R$ {{prod.preco}}</div>
     <div class="info"><span>Quantidade: </span>{{prod.quant}}</div>
+    <div class="info"><span>Tipo: </span>{{prod.tipo}}</div>
 
     <h3>Alterar:</h3>
 
@@ -17,7 +19,15 @@
       <input id="nome" [(ngModel)]="prod.preco" placeholder="Preço">
   </div>
   <div>
+    <label for="preco"> Marca do produto: </label>
+    <input id="nome" [(ngModel)]="prod.marca" placeholder="Preço">
+  </div>
+  <div>
     <label for="quantidade"> Quant. do produto: </label>
     <input id="nome" [(ngModel)]="prod.quant" placeholder="Quantidade">
+</div>
+<div>
+  <label for="preco"> Tipo do produto: </label>
+  <input id="nome" [(ngModel)]="prod.tipo" placeholder="Preço">
 </div>
 </div>
